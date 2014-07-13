@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/component.css"/>
+    <!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+<body class="demo-1">
+<div id="wrapper">
+    <div id="container">
+        <div class="base-title">
+            <nav class="codrops-demos">
+                <a href={% url 'blogapp.views.index' %}>Home</a>
+                <a href="{% url 'blogapp.views.about' %}">About</a>
+                <a href="/feed/">Feed</a>
+            </nav>
+            <h1>Space</h1>
+        </div>
+        <article class="content">
+            <div>
+                {% block content %}{% endblock %}
+            </div>
+        </article>
+    </div>
+</div>
+<footer id="footer">
+    <div class="fb-share">
+        <a class="fill-div" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php" target="_blank"><img
+                src="/static/img/icons/facebook-icon.png"></a>
+    </div>
+    <div class="twitter-share">
+        <a class="fill-div" title="Share on Twitter" href="https://twitter.com/share" target="_blank"><img
+                src="/static/img/icons/Twitter_logo_white.png"></a>
+    </div>
+    <div class="google-share">
+        <a class="fill-div" title="Share on Google+" href="https://plus.google.com/share" target="_blank"><img
+                src="/static/img/icons/google-icon.png"></a>
+    </div>
+    <div class="rss-share">
+        <a class="fill-div" title="RSS/Atom" href="/feed/" target="_blank"><img src="/static/img/icons/feed-icon.png"></a>
+    </div>
+    <div class="mail-contact">
+        <a class="fill-div" title="Contact" href="mailto:someone@example.com" target="_blank"><img
+                src="/static/img/icons/mail-icon.png"></a>
+    </div>
+</footer>
+</div>
+</body>
+</html>
+<!-- /container -->
+<script src="/static/js/plugins.js"></script>
